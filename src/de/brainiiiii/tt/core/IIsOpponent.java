@@ -24,10 +24,18 @@
 package de.brainiiiii.tt.core;
 
 /**
- *
+ * An interface for an opponent providing object.
+ * 
+ * 
+ * @param <O> The type of the opponent.
  * @author Kilian Lütkemeyer <kilian@luetkemeyer.com>
  */
-public interface IIsOpponent<O> {
+public interface IIsOpponent<O extends Opponent> {
     
+    /**
+     * Returns the opponent.
+     * 
+     * @return The opponent.
+     */
     public O getOpponent();
 }

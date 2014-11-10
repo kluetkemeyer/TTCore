@@ -31,7 +31,7 @@ package de.brainiiiii.tt.core;
  * @param <O> The type of the opponent.
  * @author Kilian Lütkemeyer <kilian@luetkemeyer.com>
  */
-public class IsOpponent<O> implements IIsOpponent<O> {
+public class IsOpponent<O extends Opponent> implements IIsOpponent<O> {
     
     /**
      * The opponent, to be wrapped.
