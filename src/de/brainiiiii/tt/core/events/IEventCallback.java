@@ -1,0 +1,45 @@
+/*
+ * The MIT License
+ *
+ * Copyright 2014 Kilian Lütkemeyer <kilian@luetkemeyer.com>.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+package de.brainiiiii.tt.core.events;
+
+/**
+ * An interface to wrap an event call.
+ * 
+ * This interface can be used to provide an easy access to eventlists and simple
+ * event calls.
+ * 
+ * @param <L> The type of the listener
+ * @param <E> The type of the event
+ * @author Kilian Lütkemeyer <kilian@luetkemeyer.com>
+ */
+public interface IEventCallback<L, E> {
+    
+    /**
+     * Calls the event listening method of the listener with the given event.
+     * 
+     * @param listener The listener to call.
+     * @param event The event to inform about.
+     */
+    public void callEvent(L listener, E event);
+}

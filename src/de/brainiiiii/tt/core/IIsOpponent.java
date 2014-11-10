@@ -25,8 +25,7 @@ package de.brainiiiii.tt.core;
 
 /**
  * An interface for an opponent providing object.
- * 
- * 
+ *  
  * @param <O> The type of the opponent.
  * @author Kilian Lütkemeyer <kilian@luetkemeyer.com>
  */

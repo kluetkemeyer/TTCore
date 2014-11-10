@@ -29,13 +29,32 @@ package de.brainiiiii.tt.core;
  */
 public class Player {
     
+    /**
+     * The internal player id.
+     * 
+     * This id is dynamically generated within in the execution environment and
+     * must provide a unique identifier among all players within this 
+     * environment. Nevertheless is this id not a global unique player id, nor
+     * a player specific id among different execution environments.
+     */
     public int playerId;
     
+    /**
+     * The id of the player provided by TTLive.
+     * 
+     * This id is a global unique identifier used within the system to provide
+     * a fast an save method to link players with events and game results.
+     */
     public int ttliveId;
     
+    /**
+     * The firstname of the player.
+     */
     public String firstname;
     
+    /**
+     * The lastname of the player.
+     */
     public String lastname;
-    
     
 }
