@@ -29,7 +29,7 @@ package de.brainiiiii.tt.core;
  * @param <O> The type of the opponent.
  * @author Kilian Lütkemeyer <kilian@luetkemeyer.com>
  */
-public interface IIsOpponent<O extends Opponent> {
+public interface IIsOpponent<O extends IOpponent> {
     
     /**
      * Returns the opponent.

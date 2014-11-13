@@ -27,6 +27,9 @@ package de.brainiiiii.tt.core;
  *
  * @author Kilian Lütkemeyer <kilian@luetkemeyer.com>
  */
-public interface Opponent {
+public interface IMarker {
+
+    public boolean isMarked(IOpponent opponent);
     
+    public boolean isPlayerMarked(Player player);
 }

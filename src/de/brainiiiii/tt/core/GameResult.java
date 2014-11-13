@@ -29,7 +29,7 @@ package de.brainiiiii.tt.core;
  * @param <O> The type of the opponent.
  * @author Kilian Lütkemeyer <kilian@luetkemeyer.com>
  */
-public abstract class GameResult<O extends Opponent> implements IIsOpponent<O> {
+public abstract class GameResult<O extends IOpponent> implements IIsOpponent<O> {
 
     /**
      * Index types for a player.

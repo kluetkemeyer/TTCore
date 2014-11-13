@@ -48,6 +48,11 @@ public class Player {
     public int ttliveId;
     
     /**
+     * The title of the person.
+     */
+    public String title;
+    
+    /**
      * The firstname of the player.
      */
     public String firstname;

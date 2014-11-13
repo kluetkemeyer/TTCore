@@ -23,11 +23,27 @@
  */
 package de.brainiiiii.tt.core;
 
+import java.util.Date;
+
 /**
  *
  * @author Kilian Lütkemeyer <kilian@luetkemeyer.com>
  */
 public interface IEvent {
     
+    public String getTournamentName();
+    
     public String getName();
+    
+    public Date getDate();
+    
+    public League getLeague();
+    
+    public Integer getRemoteId();
+    
+    public Integer getMinimumAge();
+    
+    public Integer getMaximumAge();
+    
+    public boolean includeInTTR();
 }

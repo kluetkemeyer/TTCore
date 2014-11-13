@@ -24,32 +24,9 @@
 package de.brainiiiii.tt.core;
 
 /**
- * Wrapper for any opponent.
- * 
- * A new wrapper for a opponent, to make him element of an opponent provider.
- * 
- * @param <O> The type of the opponent.
+ *
  * @author Kilian Lütkemeyer <kilian@luetkemeyer.com>
  */
-public class IsOpponent<O extends IOpponent> implements IIsOpponent<O> {
+public class League {
     
-    /**
-     * The opponent, to be wrapped.
-     */
-    private final O opponent;
-    
-    /**
-     * Creates a new opponent wrapper.
-     * 
-     * @param opponent The opponent to be wrapped. 
-     */
-    public IsOpponent(final O opponent) {
-        this.opponent = opponent;
-    }
-    
-    
-    @Override
-    public O getOpponent() {
-        return this.opponent;
-    }
 }

@@ -24,32 +24,29 @@
 package de.brainiiiii.tt.core;
 
 /**
- * Wrapper for any opponent.
+ * Implementation for an opponent for a single.
  * 
- * A new wrapper for a opponent, to make him element of an opponent provider.
- * 
- * @param <O> The type of the opponent.
  * @author Kilian Lütkemeyer <kilian@luetkemeyer.com>
  */
-public class IsOpponent<O extends IOpponent> implements IIsOpponent<O> {
+public class SingleOpponent implements IOpponent, IIsOpponent {
     
-    /**
-     * The opponent, to be wrapped.
-     */
-    private final O opponent;
+    private final Player player;
     
-    /**
-     * Creates a new opponent wrapper.
-     * 
-     * @param opponent The opponent to be wrapped. 
-     */
-    public IsOpponent(final O opponent) {
-        this.opponent = opponent;
+    public SingleOpponent(final Player player) {
+        // check parameters with assertions
+        assert(player != null);
+        
+        this.player = player;
     }
-    
-    
+
     @Override
-    public O getOpponent() {
-        return this.opponent;
+    public boolean isMarked(IMarker marker) {
+        return marker.isPlayerMarked(this.player);
     }
+
+    @Override
+    public IOpponent getOpponent() {
+        return this;
+    }
+    
 }

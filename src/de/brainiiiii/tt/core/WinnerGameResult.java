@@ -29,7 +29,7 @@ package de.brainiiiii.tt.core;
  * @param <O> The opponent type.
  * @author Kilian Lütkemeyer <kilian@luetkemeyer.com>
  */
-public class WinnerGameResult<O extends Opponent> extends GameResult<O> {
+public class WinnerGameResult<O extends IOpponent> extends GameResult<O> {
 
     private Player winner;
 

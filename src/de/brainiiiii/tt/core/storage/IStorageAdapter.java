@@ -21,35 +21,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package de.brainiiiii.tt.core;
+package de.brainiiiii.tt.core.storage;
 
 /**
- * Wrapper for any opponent.
+ * Interface for the storage adapter.
  * 
- * A new wrapper for a opponent, to make him element of an opponent provider.
+ * The storage adapter is used to store all information. Whether the information
+ * is stored local or remote depends on the implementation of the adapter.
  * 
- * @param <O> The type of the opponent.
  * @author Kilian Lütkemeyer <kilian@luetkemeyer.com>
  */
-public class IsOpponent<O extends IOpponent> implements IIsOpponent<O> {
+public interface IStorageAdapter {
+   
     
-    /**
-     * The opponent, to be wrapped.
-     */
-    private final O opponent;
-    
-    /**
-     * Creates a new opponent wrapper.
-     * 
-     * @param opponent The opponent to be wrapped. 
-     */
-    public IsOpponent(final O opponent) {
-        this.opponent = opponent;
-    }
-    
-    
-    @Override
-    public O getOpponent() {
-        return this.opponent;
-    }
 }

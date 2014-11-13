@@ -52,7 +52,7 @@ public abstract class GameResultFactory {
      * @return The resulting game result or null, if the given string does not
      * contain any valide game result information.
      */
-    public abstract <O extends Opponent> GameResult<O> factory(final String str);
+    public abstract <O extends IOpponent> GameResult<O> factory(final String str);
     
     
     /**
@@ -67,7 +67,7 @@ public abstract class GameResultFactory {
      * @return The resulting game result or null, if the given string does not
      * contain any valide game result information.
      */
-    public <O extends Opponent> GameResult<O> factory(final String str, IIsOpponent<O> opponentA, IIsOpponent<O> opponentB) {
+    public <O extends IOpponent> GameResult<O> factory(final String str, IIsOpponent<O> opponentA, IIsOpponent<O> opponentB) {
         final GameResult<O> result = this.factory(str);
         
         result.setOpponent(GameResult.Player.PLAYER_A, opponentA);
@@ -80,7 +80,7 @@ public abstract class GameResultFactory {
 class GameResultFactoryImpl extends GameResultFactory {
     
     @Override
-    public <O extends Opponent> GameResult<O> factory(final String str) {
+    public <O extends IOpponent> GameResult<O> factory(final String str) {
         final byte[] byteCode = str.getBytes();
         if (byteCode[0] == '+') {
             final WinnerGameResult<O> result = new WinnerGameResult<>();
